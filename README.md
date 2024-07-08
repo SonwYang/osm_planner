@@ -62,8 +62,8 @@ footway_width: 3  # Width of the road
 
 In a multi-sensor fusion SLAM program with a GPS sensor, add the following code:
 
-```c
-c复制ros::param::set("origin_latitude", gpsMsg->latitude);
+```
+ros::param::set("origin_latitude", gpsMsg->latitude);
 ros::param::set("origin_longitude", gpsMsg->longitude);
 ```
 
