@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+  <master auto="start"/>
+
+    <arg name="osm_map_path" default="$(find osm_planner)/osm_example/lujia2.osm"/>
+
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find osm_planner)/rviz/osm_parser_node.rviz" required="true"/> -->
+
+  <node pkg="osm_planner" type="osm_parser_node" respawn="false" name="osm_parser_node" output="screen">
+      <param name="Planner/osm_map_path" value="$(arg osm_map_path)"/>
+      <rosparam file="$(find osm_planner)/config/ros_param.yaml" command="load" />
+  </node>
+
+</launch>
