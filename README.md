@@ -50,8 +50,8 @@ Refer to the specific process at https://py1995.blog.csdn.net/article/details/13
 
 Configure parameters in `./config/ros_param.yaml`.
 
-```yaml
-yaml复制interpolation_max_distance: 1.5 # Maximum interpolation distance between two points
+```
+interpolation_max_distance: 1.5 # Maximum interpolation distance between two points
 
 filter_of_ways: ["footway"]     # Filter for parser. Parse only routes that have values on the list; if the value is "all", then parse all routes
 
@@ -72,7 +72,7 @@ This coordinate is used to convert latitude and longitude to a local Cartesian c
 # Compile and Run
 
 ```bash
-bash复制mkdir -p ~/catkin_ws/src
+mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 git clone https://yunshitu.coding.net/p/navigation_and_planning/d/osm_planner/git
 cd ..
